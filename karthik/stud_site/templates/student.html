@@ -1,0 +1,19 @@
+<h3>{{student.Student_name}}</h3>
+<p>
+	Roll No:{{student.Student_roll_no}}
+</p>
+<p>
+	Gender:{{student.Student_gender}}
+</p>
+<p>
+	Address:{{student.Student_add}}
+</p>
+<p>
+	Standar:
+	{% for std in student.Student_std.all %}
+		<em>{{std.std}}</em>
+	 {% endfor %}
+</p>
+<p>
+	Date:{{student.Student_dob}}
+</p>

@@ -1,0 +1,17 @@
+<h3> Students Details</h3>
+<table border='1'>
+	{% for stu in students %}
+		<tr>
+			<td>Rollno</td>
+			<td>NAME</td>
+			<td>Id</td>
+			<td>FULL DETAILS</td>
+		</tr>
+		<tr>
+			<td>{{stu.Student_roll_no}}</td>
+			<td> {{stu.Student_name}} </td>
+			<td>{{stu.id}}</td>
+			<td><a href="{% url 'student_det' stu.id %}">Detail</a>
+		</tr>
+	{% endfor %}
+</table>
